@@ -33,6 +33,19 @@ The formulae install prebuilt, checksummed binaries from each project's
 GitHub releases on macOS (Apple Silicon and Intel) and Linux (x86_64 and
 arm64) — nothing is compiled on your machine.
 
+## Run the server as a service
+
+The `quicsql` formula ships a service definition, so the server can run
+under launchd (macOS) or systemd (Linux):
+
+```sh
+brew services start quicsql
+```
+
+Config lives at `$(brew --prefix)/etc/quicsql/quicsql.yaml` — edit it, then
+`brew services restart quicsql`. Logs land in
+`$(brew --prefix)/var/log/quicsql.log`.
+
 ## How this tap is maintained
 
 Everything under [`Formula/`](Formula/) is generated and committed by
