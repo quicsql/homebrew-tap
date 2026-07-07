@@ -5,21 +5,21 @@
 class Quicsql < Formula
   desc "CGo-free SQLite network server (native JSON + libSQL Hrana)"
   homepage "https://github.com/quicsql/quicsql"
-  version "0.5.3"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/quicsql/quicsql/releases/download/v0.5.3/quicsql_0.5.3_darwin_amd64.tar.gz"
-      sha256 "ebdbe22f9e10237d701e420cc2453d8a267f65f62696bc8556f6185a87d5df90"
+      url "https://github.com/quicsql/quicsql/releases/download/v0.6.0/quicsql_0.6.0_darwin_amd64.tar.gz"
+      sha256 "0b78abc11844e76772e0307b84ceefe39af1abd942d7abe2afe0ad16fbeaef34"
 
       define_method(:install) do
         bin.install "quicsql"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/quicsql/quicsql/releases/download/v0.5.3/quicsql_0.5.3_darwin_arm64.tar.gz"
-      sha256 "c86b8aed5bf5121c3bd51c9ab39209ab9ba2eb400f6f13bd7a96fdc6f3333a71"
+      url "https://github.com/quicsql/quicsql/releases/download/v0.6.0/quicsql_0.6.0_darwin_arm64.tar.gz"
+      sha256 "123a756d0d3140081a15256ee537ccac8bc8f1c777b7d17dbde454c8b55390b1"
 
       define_method(:install) do
         bin.install "quicsql"
@@ -29,15 +29,15 @@ class Quicsql < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quicsql/quicsql/releases/download/v0.5.3/quicsql_0.5.3_linux_amd64.tar.gz"
-      sha256 "d033dc209a041fb8145d36cf790bb1231231ec12b6fc1e9a90cb959f7b2b12f7"
+      url "https://github.com/quicsql/quicsql/releases/download/v0.6.0/quicsql_0.6.0_linux_amd64.tar.gz"
+      sha256 "73b63b16fdf9a4d3d807e2f342a876c5801bfda0a15366f89818322638baaeae"
       define_method(:install) do
         bin.install "quicsql"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quicsql/quicsql/releases/download/v0.5.3/quicsql_0.5.3_linux_arm64.tar.gz"
-      sha256 "cc871be0b6e39a635055812be75527c4c8fb6e6965b6ed70c193911ee6f3702e"
+      url "https://github.com/quicsql/quicsql/releases/download/v0.6.0/quicsql_0.6.0_linux_arm64.tar.gz"
+      sha256 "f5e814f44ab152e0fc6e199551b3383a0db3daacfb6baf3c2b8a742268939873"
       define_method(:install) do
         bin.install "quicsql"
       end
